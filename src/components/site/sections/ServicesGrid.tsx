@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import {
   AirVent,
   ArrowRight,
@@ -32,8 +31,6 @@ const services = [
     to: "/services/washing-machine-repair",
     accent: "from-violet-500/15 to-primary/15",
   },
-
-  // New Dishwasher Service
   {
     icon: UtensilsCrossed,
     title: "Dishwasher Repair",
@@ -52,16 +49,17 @@ export function ServicesGrid() {
           <span className="text-xs font-semibold uppercase tracking-wider text-primary">
             Our Services
           </span>
+
           <h2 className="mt-3 font-display text-3xl font-bold text-navy md:text-4xl">
             Expert care for every appliance
           </h2>
+
           <p className="mt-3 text-muted-foreground">
             Doorstep diagnosis, transparent pricing and same-day repair across
             Pune & PCMC.
           </p>
         </div>
 
-        {/* Changed md:grid-cols-3 → md:grid-cols-4 */}
         <div className="mt-12 grid gap-6 md:grid-cols-4">
           {services.map(({ icon: Icon, title, desc, points, to, accent }) => (
             <div
@@ -95,12 +93,13 @@ export function ServicesGrid() {
                   ))}
                 </ul>
 
-                <Link
-                  to={to}
+                {/* Replaced Link with anchor tag */}
+                <a
+                  href={to}
                   className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition hover:gap-2.5"
                 >
                   Book Now <ArrowRight className="h-4 w-4" />
-                </Link>
+                </a>
               </div>
             </div>
           ))}

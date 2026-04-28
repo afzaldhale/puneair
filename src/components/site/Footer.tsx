@@ -1,4 +1,3 @@
-import { Link } from "@tanstack/react-router";
 import {
   Mail,
   MapPin,
@@ -30,6 +29,7 @@ export function Footer() {
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary">
                 <Wrench className="h-5 w-5 text-primary-foreground" />
               </div>
+
               <div className="font-display text-xl font-bold">{BRAND}</div>
             </div>
 
@@ -71,9 +71,9 @@ export function Footer() {
                 ["Emergency Service", "/contact"],
               ].map(([label, to]) => (
                 <li key={label}>
-                  <Link to={to} className="transition hover:text-white">
+                  <a href={to} className="transition hover:text-white">
                     {label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -87,27 +87,27 @@ export function Footer() {
 
             <ul className="space-y-2.5 text-sm text-navy-foreground/70">
               <li>
-                <Link to="/about" className="transition hover:text-white">
+                <a href="/about" className="transition hover:text-white">
                   About Us
-                </Link>
+                </a>
               </li>
 
               <li>
-                <Link to="/services" className="transition hover:text-white">
+                <a href="/services" className="transition hover:text-white">
                   Our Services
-                </Link>
+                </a>
               </li>
 
               <li>
-                <Link to="/contact" className="transition hover:text-white">
+                <a href="/contact" className="transition hover:text-white">
                   Contact
-                </Link>
+                </a>
               </li>
 
               <li>
-                <Link to="/contact" className="transition hover:text-white">
+                <a href="/contact" className="transition hover:text-white">
                   Book a Service
-                </Link>
+                </a>
               </li>
             </ul>
 
