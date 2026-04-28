@@ -1,5 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { AirVent, ArrowRight, Refrigerator, WashingMachine } from "lucide-react";
+import {
+  AirVent,
+  ArrowRight,
+  Refrigerator,
+  WashingMachine,
+  UtensilsCrossed,
+} from "lucide-react";
 
 const services = [
   {
@@ -26,6 +32,16 @@ const services = [
     to: "/services/washing-machine-repair",
     accent: "from-violet-500/15 to-primary/15",
   },
+
+  // New Dishwasher Service
+  {
+    icon: UtensilsCrossed,
+    title: "Dishwasher Repair",
+    desc: "Expert repair for cleaning issues, drainage problems, leaks, and installation.",
+    points: ["Cleaning issue", "Water drainage", "Leak repair", "Installation"],
+    to: "/services/dishwasher-repair",
+    accent: "from-orange-500/15 to-yellow-500/15",
+  },
 ] as const;
 
 export function ServicesGrid() {
@@ -40,11 +56,13 @@ export function ServicesGrid() {
             Expert care for every appliance
           </h2>
           <p className="mt-3 text-muted-foreground">
-            Doorstep diagnosis, transparent pricing and same-day repair across Pune & PCMC.
+            Doorstep diagnosis, transparent pricing and same-day repair across
+            Pune & PCMC.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        {/* Changed md:grid-cols-3 → md:grid-cols-4 */}
+        <div className="mt-12 grid gap-6 md:grid-cols-4">
           {services.map(({ icon: Icon, title, desc, points, to, accent }) => (
             <div
               key={title}
@@ -53,16 +71,24 @@ export function ServicesGrid() {
               <div
                 className={`absolute -right-12 -top-12 h-40 w-40 rounded-full bg-gradient-to-br ${accent} blur-2xl transition group-hover:scale-110`}
               />
+
               <div className="relative">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-glow">
                   <Icon className="h-7 w-7" />
                 </div>
-                <h3 className="mt-5 font-display text-xl font-bold text-navy">{title}</h3>
+
+                <h3 className="mt-5 font-display text-xl font-bold text-navy">
+                  {title}
+                </h3>
+
                 <p className="mt-2 text-sm text-muted-foreground">{desc}</p>
 
                 <ul className="mt-5 space-y-2">
                   {points.map((p) => (
-                    <li key={p} className="flex items-center gap-2 text-sm text-foreground/80">
+                    <li
+                      key={p}
+                      className="flex items-center gap-2 text-sm text-foreground/80"
+                    >
                       <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                       {p}
                     </li>

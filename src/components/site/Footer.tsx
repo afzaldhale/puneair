@@ -9,6 +9,7 @@ import {
   Send,
   AtSign,
 } from "lucide-react";
+
 import {
   ADDRESS,
   BRAND,
@@ -23,6 +24,7 @@ export function Footer() {
     <footer className="bg-navy text-navy-foreground">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-6 md:py-20">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+          {/* Brand Section */}
           <div>
             <div className="flex items-center gap-2.5">
               <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-primary">
@@ -30,11 +32,14 @@ export function Footer() {
               </div>
               <div className="font-display text-xl font-bold">{BRAND}</div>
             </div>
+
             <p className="mt-4 text-sm leading-relaxed text-navy-foreground/70">
               Pune's most trusted home appliance repair service. Same-day
-              doorstep repair for AC, refrigerator and washing machine — by
-              verified expert technicians.
+              doorstep repair for AC, refrigerator, washing machine, and
+              dishwasher repairs by verified expert technicians.
             </p>
+
+            {/* Social Icons */}
             <div className="mt-5 flex gap-2">
               {[Globe, Send, AtSign].map((Icon, i) => (
                 <a
@@ -49,15 +54,18 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Services */}
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-navy-foreground/90">
               Services
             </h4>
+
             <ul className="space-y-2.5 text-sm text-navy-foreground/70">
               {[
                 ["AC Repair", "/services/ac-repair"],
                 ["Refrigerator Repair", "/services/refrigerator-repair"],
                 ["Washing Machine Repair", "/services/washing-machine-repair"],
+                ["Dishwasher Repair", "/services/dishwasher-repair"],
                 ["Installation", "/services"],
                 ["Gas Refilling", "/services"],
                 ["Emergency Service", "/contact"],
@@ -71,45 +79,54 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Company */}
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-navy-foreground/90">
               Company
             </h4>
+
             <ul className="space-y-2.5 text-sm text-navy-foreground/70">
               <li>
                 <Link to="/about" className="transition hover:text-white">
                   About Us
                 </Link>
               </li>
+
               <li>
                 <Link to="/services" className="transition hover:text-white">
                   Our Services
                 </Link>
               </li>
+
               <li>
                 <Link to="/contact" className="transition hover:text-white">
                   Contact
                 </Link>
               </li>
+
               <li>
                 <Link to="/contact" className="transition hover:text-white">
                   Book a Service
                 </Link>
               </li>
             </ul>
+
             <h4 className="mt-6 mb-3 text-sm font-semibold uppercase tracking-wider text-navy-foreground/90">
               Working Hours
             </h4>
+
             <p className="flex items-start gap-2 text-sm text-navy-foreground/70">
               <Clock className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
               Mon – Sun: 7:00 AM – 11:00 PM
             </p>
           </div>
 
+          {/* Contact */}
           <div>
             <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-navy-foreground/90">
               Get in Touch
             </h4>
+
             <ul className="space-y-3 text-sm text-navy-foreground/80">
               <li className="flex items-start gap-3">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
@@ -117,17 +134,20 @@ export function Footer() {
                   {PHONE_DISPLAY}
                 </a>
               </li>
+
               <li className="flex items-start gap-3">
                 <Mail className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <a href={`mailto:${EMAIL}`} className="hover:text-white">
                   {EMAIL}
                 </a>
               </li>
+
               <li className="flex items-start gap-3">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                 <span>{ADDRESS}</span>
               </li>
             </ul>
+
             <a
               href={whatsappLink()}
               target="_blank"
@@ -139,11 +159,23 @@ export function Footer() {
           </div>
         </div>
 
+        {/* Bottom Footer */}
         <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-navy-foreground/60 md:flex-row">
           <p>
             © {new Date().getFullYear()} {BRAND}. All rights reserved.
           </p>
-          <p>Crafted with care in Pune, India.</p>
+
+          <p>
+            Crafted with care in Pune, India • Developed by{" "}
+            <a
+              href="https://www.vtechnex.com"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-primary transition hover:text-white"
+            >
+              Vtechnex
+            </a>
+          </p>
         </div>
       </div>
     </footer>
