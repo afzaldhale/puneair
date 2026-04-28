@@ -8,7 +8,6 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Contact from "@/pages/Contact";
 import Services from "@/pages/Services";
-import AcRepair from "@/pages/AcRepair";
 import RefrigeratorRepair from "@/pages/RefrigeratorRepair";
 import WashingMachineRepair from "@/pages/WashingMachineRepair";
 
@@ -17,7 +16,6 @@ export const routes = {
   "/about": About,
   "/contact": Contact,
   "/services": Services,
-  "/services/ac-repair": AcRepair,
   "/services/refrigerator-repair": RefrigeratorRepair,
   "/services/washing-machine-repair": WashingMachineRepair,
 } as const;
