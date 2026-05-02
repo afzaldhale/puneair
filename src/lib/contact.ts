@@ -4,7 +4,8 @@ export const WHATSAPP = "919890642540";
 export const EMAIL = "support@puneairservice.in";
 export const ADDRESS = "Kondhwa, Pune, Maharashtra";
 export const BRAND = "PuneAirService";
-export const BRAND_TAGLINE = "Fast Appliance Repair | AC, Fridge & Washing Machine";
+export const BRAND_TAGLINE =
+  "Fast Appliance Repair | AC, Fridge, Washing Machine & Dishwasher";
 
 export function whatsappLink(message = "Hi, I need an appliance repair service.") {
   return `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`;

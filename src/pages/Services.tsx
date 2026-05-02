@@ -5,6 +5,7 @@ import {
   Settings,
   Sparkles,
   Thermometer,
+  UtensilsCrossed,
   WashingMachine,
   Wrench,
   Zap,
@@ -18,19 +19,25 @@ const main = [
     icon: AirVent,
     to: "/services/ac-repair",
     title: "AC Repair",
-    desc: "Window, split & inverter AC repair, gas refill & deep cleaning.",
+    desc: "Window, split and inverter AC repair, gas refill, and deep cleaning.",
   },
   {
     icon: Refrigerator,
     to: "/services/refrigerator-repair",
     title: "Refrigerator Repair",
-    desc: "Single, double & side-by-side door fridge — compressor, gas, sensors.",
+    desc: "Single, double, and side-by-side fridge repair for compressor, gas, and sensor issues.",
   },
   {
     icon: WashingMachine,
     to: "/services/washing-machine-repair",
     title: "Washing Machine Repair",
-    desc: "Front load, top load, semi-automatic — drum, motor & PCB issues.",
+    desc: "Front load, top load, and semi-automatic repair for drum, motor, and PCB issues.",
+  },
+  {
+    icon: UtensilsCrossed,
+    to: "/services/dishwasher-repair",
+    title: "Dishwasher Repair",
+    desc: "Cleaning, drainage, leak, and wash cycle issues for all major dishwasher brands.",
   },
 ];
 
@@ -48,7 +55,7 @@ const more = [
   {
     icon: Thermometer,
     title: "Gas Refilling",
-    desc: "AC & fridge gas top-up with leak detection & pressure testing.",
+    desc: "AC and fridge gas top-up with leak detection and pressure testing.",
   },
   {
     icon: Sparkles,
@@ -58,14 +65,13 @@ const more = [
   {
     icon: Zap,
     title: "Emergency Repair",
-    desc: "24×7 urgent breakdown response — technician in 60 minutes.",
+    desc: "24x7 urgent breakdown response with a technician in 60 minutes.",
   },
 ];
 
 export default function Services() {
   return (
     <SiteLayout>
-      {/* Hero Section */}
       <section className="bg-gradient-hero py-20 text-navy-foreground md:py-28">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3.5 py-1.5 text-xs font-semibold backdrop-blur">
@@ -73,24 +79,23 @@ export default function Services() {
           </span>
 
           <h1 className="mt-5 font-display text-4xl font-bold leading-tight md:text-5xl">
-            Everything your home appliances need — under one roof.
+            Everything your home appliances need under one roof.
           </h1>
 
           <p className="mt-4 text-base text-navy-foreground/80 md:text-lg">
-            Repair, installation, maintenance and emergency support — by Pune's
+            Repair, installation, maintenance, and emergency support by Pune&apos;s
             most trusted technicians.
           </p>
         </div>
       </section>
 
-      {/* Main Services */}
       <section className="py-20 md:py-24">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <h2 className="font-display text-2xl font-bold text-navy md:text-3xl">
             Repair Services
           </h2>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {main.map(({ icon: Icon, to, title, desc }) => (
               <a
                 key={title}
@@ -115,7 +120,6 @@ export default function Services() {
             ))}
           </div>
 
-          {/* Additional Services */}
           <h2 className="mt-20 font-display text-2xl font-bold text-navy md:text-3xl">
             Additional Services
           </h2>

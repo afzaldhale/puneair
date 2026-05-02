@@ -44,9 +44,9 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-navy-foreground/80 md:text-lg">
-            Expert technicians for AC, Refrigerator & Washing Machine repairs
-            with same-day doorstep service. Transparent pricing. 30-day service
-            warranty.
+            Expert technicians for AC, Refrigerator, Washing Machine, and
+            Dishwasher repairs with same-day doorstep service. Transparent
+            pricing. 30-day service warranty.
           </p>
 
           {/* CTA Buttons */}

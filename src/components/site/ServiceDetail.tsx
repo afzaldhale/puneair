@@ -13,7 +13,7 @@ import { EmergencyCTA } from "@/components/site/sections/EmergencyCTA";
 import { telLink, whatsappLink } from "@/lib/contact";
 
 interface Props {
-  slug: "ac" | "fridge" | "washer";
+  slug: "ac" | "fridge" | "washer" | "dishwasher";
   title: string;
   tagline: string;
   description: string;
